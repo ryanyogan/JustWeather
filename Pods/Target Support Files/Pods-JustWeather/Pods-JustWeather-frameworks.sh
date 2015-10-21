@@ -82,22 +82,3 @@ strip_invalid_archs() {
   fi
 }
 
-
-if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-JustWeather/Box.framework"
-  install_framework "Pods-JustWeather/HexColors.framework"
-  install_framework "Pods-JustWeather/LBBlurredImage.framework"
-  install_framework "Pods-JustWeather/Mantle.framework"
-  install_framework "Pods-JustWeather/ReactiveCocoa.framework"
-  install_framework "Pods-JustWeather/Result.framework"
-  install_framework "Pods-JustWeather/TSMessages.framework"
-fi
-if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-JustWeather/Box.framework"
-  install_framework "Pods-JustWeather/HexColors.framework"
-  install_framework "Pods-JustWeather/LBBlurredImage.framework"
-  install_framework "Pods-JustWeather/Mantle.framework"
-  install_framework "Pods-JustWeather/ReactiveCocoa.framework"
-  install_framework "Pods-JustWeather/Result.framework"
-  install_framework "Pods-JustWeather/TSMessages.framework"
-fi

@@ -13,10 +13,11 @@
 		856AB0E71BD7ED8800F88513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E51BD7ED8800F88513 /* Main.storyboard */; };
 		856AB0E91BD7ED8800F88513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E81BD7ED8800F88513 /* Assets.xcassets */; };
 		856AB0EC1BD7ED8800F88513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0EA1BD7ED8800F88513 /* LaunchScreen.storyboard */; };
-		8C7D00D8804B99BAEDB3EE5B /* Pods_JustWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */; };
+		AF827A9EE364FF0813D0D4EE /* libPods-JustWeather.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 062AD41C39FC046D9C1E1BC9 /* libPods-JustWeather.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		062AD41C39FC046D9C1E1BC9 /* libPods-JustWeather.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JustWeather.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		696AC0DF58F55A61F765AD2F /* Pods-JustWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather.release.xcconfig"; sourceTree = "<group>"; };
 		856AB0D91BD7ED8800F88513 /* JustWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856AB0DD1BD7ED8800F88513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -28,7 +29,6 @@
 		856AB0E81BD7ED8800F88513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856AB0EB1BD7ED8800F88513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856AB0ED1BD7ED8800F88513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF37AAC08EDA5A137F4384EE /* Pods-JustWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C7D00D8804B99BAEDB3EE5B /* Pods_JustWeather.framework in Frameworks */,
+				AF827A9EE364FF0813D0D4EE /* libPods-JustWeather.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,7 +47,7 @@
 		0767BBFE0844274114F72414 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */,
+				062AD41C39FC046D9C1E1BC9 /* libPods-JustWeather.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -343,10 +343,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanyogan.JustWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -358,10 +360,12 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = JustWeather/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryanyogan.JustWeather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

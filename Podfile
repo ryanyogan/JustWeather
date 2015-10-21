@@ -1,10 +1,10 @@
-platform :ios, '9.0'
-use_frameworks!
+platform :ios, '8.4'
+#use_frameworks!
 
 target 'JustWeather' do
   pod 'Mantle'
   pod 'LBBlurredImage'
   pod 'TSMessages'
-  pod 'ReactiveCocoa'
+  pod 'ReactiveCocoa', '2.5'
 end
 
