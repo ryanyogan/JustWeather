@@ -13,9 +13,11 @@
 		856AB0E71BD7ED8800F88513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E51BD7ED8800F88513 /* Main.storyboard */; };
 		856AB0E91BD7ED8800F88513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E81BD7ED8800F88513 /* Assets.xcassets */; };
 		856AB0EC1BD7ED8800F88513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0EA1BD7ED8800F88513 /* LaunchScreen.storyboard */; };
+		8C7D00D8804B99BAEDB3EE5B /* Pods_JustWeather.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		696AC0DF58F55A61F765AD2F /* Pods-JustWeather.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWeather.release.xcconfig"; path = "Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather.release.xcconfig"; sourceTree = "<group>"; };
 		856AB0D91BD7ED8800F88513 /* JustWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		856AB0DD1BD7ED8800F88513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		856AB0DF1BD7ED8800F88513 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		856AB0E81BD7ED8800F88513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856AB0EB1BD7ED8800F88513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856AB0ED1BD7ED8800F88513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JustWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF37AAC08EDA5A137F4384EE /* Pods-JustWeather.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustWeather.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C7D00D8804B99BAEDB3EE5B /* Pods_JustWeather.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0767BBFE0844274114F72414 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B09A4ECF14330CCAC7D2F411 /* Pods_JustWeather.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		856AB0D01BD7ED8800F88513 = {
 			isa = PBXGroup;
 			children = (
 				856AB0DB1BD7ED8800F88513 /* JustWeather */,
 				856AB0DA1BD7ED8800F88513 /* Products */,
+				94E1E759A688A24A174310EE /* Pods */,
+				0767BBFE0844274114F72414 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +94,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		94E1E759A688A24A174310EE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF37AAC08EDA5A137F4384EE /* Pods-JustWeather.debug.xcconfig */,
+				696AC0DF58F55A61F765AD2F /* Pods-JustWeather.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 856AB0F01BD7ED8800F88513 /* Build configuration list for PBXNativeTarget "JustWeather" */;
 			buildPhases = (
+				7FE12BB40A76E9A91EB02E26 /* Check Pods Manifest.lock */,
 				856AB0D51BD7ED8800F88513 /* Sources */,
 				856AB0D61BD7ED8800F88513 /* Frameworks */,
 				856AB0D71BD7ED8800F88513 /* Resources */,
+				5D4EFA4CC3CA502C5EF6F865 /* Embed Pods Frameworks */,
+				AE6177DB2C9BDC7BC0E4B8D5 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,6 +171,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D4EFA4CC3CA502C5EF6F865 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE12BB40A76E9A91EB02E26 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AE6177DB2C9BDC7BC0E4B8D5 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JustWeather/Pods-JustWeather-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		856AB0D51BD7ED8800F88513 /* Sources */ = {
@@ -262,6 +337,7 @@
 		};
 		856AB0F11BD7ED8800F88513 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF37AAC08EDA5A137F4384EE /* Pods-JustWeather.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -276,6 +352,7 @@
 		};
 		856AB0F21BD7ED8800F88513 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 696AC0DF58F55A61F765AD2F /* Pods-JustWeather.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -307,6 +384,7 @@
 				856AB0F21BD7ED8800F88513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
