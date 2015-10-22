@@ -13,8 +13,9 @@
 		856AB0E71BD7ED8800F88513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E51BD7ED8800F88513 /* Main.storyboard */; };
 		856AB0E91BD7ED8800F88513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0E81BD7ED8800F88513 /* Assets.xcassets */; };
 		856AB0EC1BD7ED8800F88513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 856AB0EA1BD7ED8800F88513 /* LaunchScreen.storyboard */; };
+		859F0AAA1BD9ADF4009F8B86 /* weather-clear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 859F0AA91BD9ADF4009F8B86 /* weather-clear@2x.png */; settings = {ASSET_TAGS = (); }; };
+		859F0AAC1BD9AE9A009F8B86 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 859F0AAB1BD9AE9A009F8B86 /* Images */; settings = {ASSET_TAGS = (); }; };
 		85BAFB641BD7F5D800F259A1 /* WXController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BAFB631BD7F5D800F259A1 /* WXController.m */; settings = {ASSET_TAGS = (); }; };
-		85F8F5B41BD7FABE0014E5F9 /* Images in Resources */ = {isa = PBXBuildFile; fileRef = 85F8F5B31BD7FABE0014E5F9 /* Images */; settings = {ASSET_TAGS = (); }; };
 		85F8F5B61BD8031D0014E5F9 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F8F5B51BD8031D0014E5F9 /* bg.png */; settings = {ASSET_TAGS = (); }; };
 		85F8F5B81BD803240014E5F9 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F8F5B71BD803240014E5F9 /* bg@2x.png */; settings = {ASSET_TAGS = (); }; };
 		85F8F5BB1BD811F30014E5F9 /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 85F8F5BA1BD811F30014E5F9 /* WXClient.m */; settings = {ASSET_TAGS = (); }; };
@@ -37,9 +38,10 @@
 		856AB0E81BD7ED8800F88513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		856AB0EB1BD7ED8800F88513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		856AB0ED1BD7ED8800F88513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		859F0AA91BD9ADF4009F8B86 /* weather-clear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weather-clear@2x.png"; sourceTree = "<group>"; };
+		859F0AAB1BD9AE9A009F8B86 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
 		85BAFB621BD7F5D800F259A1 /* WXController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXController.h; path = ../WXController.h; sourceTree = "<group>"; };
 		85BAFB631BD7F5D800F259A1 /* WXController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXController.m; path = ../WXController.m; sourceTree = "<group>"; };
-		85F8F5B31BD7FABE0014E5F9 /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Images; path = ../../../Downloads/Images; sourceTree = "<group>"; };
 		85F8F5B51BD8031D0014E5F9 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg.png; path = ../bg.png; sourceTree = "<group>"; };
 		85F8F5B71BD803240014E5F9 /* bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg@2x.png"; path = "../bg@2x.png"; sourceTree = "<group>"; };
 		85F8F5B91BD811F30014E5F9 /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXClient.h; path = ../WXClient.h; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		856AB0D01BD7ED8800F88513 = {
 			isa = PBXGroup;
 			children = (
+				859F0AAB1BD9AE9A009F8B86 /* Images */,
 				856AB0DB1BD7ED8800F88513 /* JustWeather */,
 				856AB0DA1BD7ED8800F88513 /* Products */,
 				94E1E759A688A24A174310EE /* Pods */,
@@ -102,9 +105,9 @@
 				85F8F5C01BD8121A0014E5F9 /* WXCondition.m */,
 				85F8F5C21BD8122E0014E5F9 /* WXDailyForecast.h */,
 				85F8F5C31BD8122E0014E5F9 /* WXDailyForecast.m */,
+				859F0AA91BD9ADF4009F8B86 /* weather-clear@2x.png */,
 				85F8F5B51BD8031D0014E5F9 /* bg.png */,
 				85F8F5B71BD803240014E5F9 /* bg@2x.png */,
-				85F8F5B31BD7FABE0014E5F9 /* Images */,
 				85BAFB621BD7F5D800F259A1 /* WXController.h */,
 				85BAFB631BD7F5D800F259A1 /* WXController.m */,
 				856AB0DF1BD7ED8800F88513 /* AppDelegate.h */,
@@ -199,8 +202,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				85F8F5B61BD8031D0014E5F9 /* bg.png in Resources */,
-				85F8F5B41BD7FABE0014E5F9 /* Images in Resources */,
 				856AB0EC1BD7ED8800F88513 /* LaunchScreen.storyboard in Resources */,
+				859F0AAC1BD9AE9A009F8B86 /* Images in Resources */,
+				859F0AAA1BD9ADF4009F8B86 /* weather-clear@2x.png in Resources */,
 				85F8F5B81BD803240014E5F9 /* bg@2x.png in Resources */,
 				856AB0E91BD7ED8800F88513 /* Assets.xcassets in Resources */,
 				856AB0E71BD7ED8800F88513 /* Main.storyboard in Resources */,
