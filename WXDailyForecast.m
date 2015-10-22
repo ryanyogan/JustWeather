@@ -10,7 +10,6 @@
 
 @implementation WXDailyForecast
 
-// Override the mapping for the two deep nested values
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     NSMutableDictionary *paths = [[super JSONKeyPathsByPropertyKey] mutableCopy];
     paths[@"tempHigh"] = @"temp.max";

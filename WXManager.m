@@ -33,6 +33,7 @@
         
         _client = [[WXClient alloc] init];
         
+        NSLog(@"About to start observing");
         [[[[RACObserve(self, currentLocation) ignore:nil] flattenMap:^(CLLocation *newLocation) {
             return [RACSignal merge:@[
                                       [self updateCurrentConditions],
@@ -50,6 +51,7 @@
 }
 
 - (RACSignal *)updateCurrentConditions {
+    NSLog(@"Fired the updateCurrentConditions");
     return [[self.client fetchCurrentConditionsForLocation:self.currentLocation.coordinate]
             doNext:^(WXCondition *condition) {
                 self.currentCondition = condition;
@@ -71,6 +73,7 @@
 }
 
 - (void)findCurrentLocation {
+    NSLog(@"Fired the findCurrentLocation");
     self.isFirstUpdate = YES;
     [self.locationManager startUpdatingLocation];
 }

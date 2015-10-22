@@ -32,15 +32,7 @@
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSString *str) {
         return [NSDate dateWithTimeIntervalSince1970:str.floatValue];
     } reverseBlock:^(NSDate *date) {
-        return [NSString stringWithFormat:@"%f", [date timeIntervalSince1970]];
-    }];
-}
-
-+ (NSValueTransformer *)conditionDescriptionJSONTransformer {
-    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
-        return [values firstObject];
-    } reverseBlock:^(NSString *str) {
-        return @[str];
+        return [NSString stringWithFormat:@"%f",[date timeIntervalSince1970]];
     }];
 }
 
@@ -50,6 +42,14 @@
 
 + (NSValueTransformer *)sunsetJSONTransformer {
     return [self dateJSONTransformer];
+}
+
++ (NSValueTransformer *)conditionDescriptionJSONTransformer {
+    return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSArray *values) {
+        return [values firstObject];
+    } reverseBlock:^(NSString *str) {
+        return @[str];
+    }];
 }
 
 + (NSValueTransformer *)conditionJSONTransformer {
@@ -64,15 +64,14 @@
 
 + (NSValueTransformer *)windSpeedJSONTransformer {
     return [MTLValueTransformer reversibleTransformerWithForwardBlock:^(NSNumber *num) {
-        return @(num.floatValue * MPS_TO_MPH);
+        return @(num.floatValue*MPS_TO_MPH);
     } reverseBlock:^(NSNumber *speed) {
-        return @(speed.floatValue / MPS_TO_MPH);
+        return @(speed.floatValue/MPS_TO_MPH);
     }];
 }
 
 + (NSDictionary *)imageMap {
     static NSDictionary *_imageMap = nil;
-    
     if (! _imageMap) {
         _imageMap = @{
                       @"01d" : @"weather-clear",

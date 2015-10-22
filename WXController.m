@@ -16,6 +16,7 @@
 @property (nonatomic, strong) UIImageView *blurredImageView;
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGFloat screenHeight;
+@property (nonatomic, strong) CLLocationManager *locationManger;
 
 @end
 
@@ -113,6 +114,8 @@
     [header addSubview:iconView];
     
     
+    self.locationManger = [[CLLocationManager alloc] init];
+    [self.locationManger requestAlwaysAuthorization];
     [[WXManager sharedManager] findCurrentLocation];
 }
 
@@ -122,7 +125,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)viewWillLayoutSubviews {
