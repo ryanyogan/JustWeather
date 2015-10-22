@@ -25,6 +25,21 @@
     return self;
 }
 
+- (RACSignal *)fetchDailyForecastForLocation:(CLLocationCoordinate2D)coordinate {
+    NSString *urlString = [NSString stringWithFormat:@"http://api.openweather.org/data/2.5/forecast/daily? \
+                           lat=%f&lon=%f&units=imperial&cnt=7", coordinate.latitude, coordinate.longitude];
+    NSURL *url = [NSURL URLWithString:urlString];
+    
+    return [[self fetchJSONFromURL:url] map:^(NSDictionary *json) {
+        RACSequence *list = [json[@"list"] rac_sequence];
+        
+        return [[list map:^(NSDictionary *item) {
+            return [MTLJSONAdapter modelOfClass:[WXCondition class] fromJSONDictionary:item error:nil];
+        }] array];
+    }];
+    
+}
+
 - (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)coordinate {
     NSString *urlString = [NSString stringWithFormat:@"http://api.openweather.org/data/2.5/forecast? \
                            lat=%f&lon=%f&units=imperial&cnt=12", coordinate.latitude, coordinate.longitude];
